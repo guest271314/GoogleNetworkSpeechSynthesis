@@ -247,6 +247,7 @@ class GoogleNetworkSpeechSynthesis {
     let msd = new MediaStreamAudioDestinationNode(this.ac, {
       channelCount: 1,
     });
+    // Chrome implementation of MediaStreamAudioDestinationNode MediaStreamTrack does not output silence
     let osc = new OscillatorNode(this.ac, {
       frquency: 0,
     });
