@@ -17,7 +17,7 @@ GoogleNetworkSpeechSynthesis.getGoogleApiKey()
        Cardinal <say-as interpret-as="cardinal">123</say-as> <break/>
        Ordinal <say-as interpret-as="ordinal">123</say-as> <break/>
        Characters <say-as interpret-as="characters">SSML</say-as>
-       Date format <say-as interpret-as="characters">mdy</say-as> <say-as interpret-as="date" format="mdy">2/13/2018</say-as> <break/>
+       Date format <say-as interpret-as="characters">mdy</say-as> <say-as interpret-as="date" format="mdy">${new Intl.DateTimeFormat(navigator.language).format(new Date())}</say-as> <break/>
        Time format <say-as interpret-as="characters">hms</say-as> 24 <say-as interpret-as="time" format="hms24">${new Date().toLocaleTimeString()}</say-as> <break/>
        Time format <say-as interpret-as="characters">hms</say-as> 12 <say-as interpret-as="time" format="hms12">${new Date()
          .toLocaleTimeString()
