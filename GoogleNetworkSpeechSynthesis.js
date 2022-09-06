@@ -415,12 +415,11 @@ someone who doesn't want you to be correct.
       gnss1.removeAudioElements();
     }, console.error);
   
-    // Should throw
+    // Should throw for input.length > 32768
     try {
       const gnss1 = new GoogleNetworkSpeechSynthesis({
         key,
         input: '1'.repeat(32768 + 1),
-        // Should throw
         inputType: 'text',
         playbackType: 'stream',
         gender: 'female',
