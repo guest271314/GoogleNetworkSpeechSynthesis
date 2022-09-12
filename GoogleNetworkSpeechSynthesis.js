@@ -194,7 +194,7 @@ class GoogleNetworkSpeechSynthesis {
       const response = await request.arrayBuffer();
       return response;
     } catch (error) {
-      throw err;
+      throw error;
     }
   }
   async audioData(ab) {
